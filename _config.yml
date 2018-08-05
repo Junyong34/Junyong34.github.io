@@ -9,10 +9,10 @@ minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "
 
 # Site Settings
 locale                   : "ko"
-title                    : "DevPark"
+title                    : "DevPark Blog"
 # title                    : "Dev.Park"
 title_separator          : "-"
-name                     :
+name                     : "JunYong Park"
 # name                     : "JunYong Park"
 description              : "Web기술 블로그"
 # description              : "A personal web for Junho Baik"
@@ -93,9 +93,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "JunYong Park
+  name             : "JunYong Park"
   # name             : "Junho Baik"
-  avatar           : 
+  avatar           : "/assets/images/myprofile.png"
   # avatar           : "/assets/images/profile.png"
   bio              : "Font End Developer"
   # bio              : "Junior Front-End Web Developer"
