@@ -30,7 +30,7 @@ devicePixelRatio로 인해 이미지가 업 스케일되고 흐려짐
 
 이때 캔버스 widht는 200px에 devicePixelRatio,backingStoreRatio값이 2가 되면 backing store 넓이는 비율로 인해 400px 만큼 커지게 되면서 캔버스에 그림을 옴길때 이미지가 흐려지는 현상이 발생 하게 된다. 특히 애플 레니타 고해상도에서는 더 흐려짐이 잘보인다.
 
-![canvas-backing-store](/assets/images/javascript/canvas-backing-store.png)
+![canvas-backing-store](./assets/images/javascript/canvas-backing-store.png)
 
 
 우리는 캔버스 생성시 몇가지 코드를 넣어서 해당 문제를 해결할 수 있다.
