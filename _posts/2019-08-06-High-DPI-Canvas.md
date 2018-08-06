@@ -120,6 +120,6 @@ function drawImage(opts) {
 ---
 
 ## reference
-https://www.html5rocks.com/en/tutorials/canvas/hidpi/
+- [참고 블로그](https://www.html5rocks.com/en/tutorials/canvas/hidpi/)
+- [예제](https://bl.ocks.org/cmgiven/f2100df55e076f386c13ada4988b75e9)
 
-https://bl.ocks.org/cmgiven/f2100df55e076f386c13ada4988b75e9
