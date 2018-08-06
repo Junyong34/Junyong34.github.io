@@ -13,9 +13,12 @@
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
 </script>
 
-<!-- For all browsers -->
-<link rel="stylesheet" href="{{ '/assets/css/main.css' | absolute_url }}">
 
+<!-- For all browsers -->
+<link rel="stylesheet" href="{{ '/assets/css/androidstudio.css' | absolute_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | absolute_url }}">
+<script src="{{ '/assets/js/highlight.pack.js' | absolute_url }}}"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 <!--[if lte IE 9]>
   <style>
     /* old IE unsupported flexbox fixes */
@@ -41,3 +44,4 @@
     <script src="{{ script_path }}"></script>
   {% endfor %}
 {% endif %}
+
