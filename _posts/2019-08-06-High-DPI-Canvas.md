@@ -18,7 +18,8 @@ Window.devicePixelRatio 속성은 읽기 전용이고 현재 하나의 CSS 픽�
 
 픽셀 넓이에 이미지를 만들고 그려지면서 devicePixelRatio에 의해 이미지가 확대되어 흐리게 보입니다.
 
-![canvas-dpi-1](/assets/images/javascript/canvas-dpi-1.png)
+![canvas-dpi-1](https://user-images.githubusercontent.com/25451713/43692392-7edd908c-9962-11e8-9e03-25ba478d8f67.PNG)
+
 devicePixelRatio로 인해 이미지가 업 스케일되고 흐려짐
 
 위에 이미지가 흐려진거에 대한 해결책은 devicePixelRatio에 의해 확장 된 이미지를 생성 한 다음 CSS를 사용하여 같은 크기로 축소하는 것이다.
@@ -30,7 +31,8 @@ devicePixelRatio로 인해 이미지가 업 스케일되고 흐려짐
 
 이때 캔버스 widht는 200px에 devicePixelRatio,backingStoreRatio값이 2가 되면 backing store 넓이는 비율로 인해 400px 만큼 커지게 되면서 캔버스에 그림을 옴길때 이미지가 흐려지는 현상이 발생 하게 된다. 특히 애플 레니타 고해상도에서는 더 흐려짐이 잘보인다.
 
-![canvas-backing-store](./assets/images/javascript/canvas-backing-store.png)
+![canvas-backing-store](https://user-images.githubusercontent.com/25451713/43692376-67436622-9962-11e8-9c66-756876d9b67e.PNG)
+
 
 
 우리는 캔버스 생성시 몇가지 코드를 넣어서 해당 문제를 해결할 수 있다.
