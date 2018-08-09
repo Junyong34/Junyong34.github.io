@@ -1,11 +1,9 @@
 ---
-title: css Animation
+title: css transform 2D
 date: 2018-08-07
-category: Animation
+category: transform 2D
 tags:
   - css
-  - Animation
-  - keyframe
 ---
 # translate() 속성 (2D)
 
@@ -16,20 +14,7 @@ tags:
 웹요소를 변형하려면 transfrom 속성을 사용해야 하며 기본형식은 아래와 같습니다.
 여기에서 ‘변형 함수 값’이란 오늘 알아볼 ‘scale, rotate, skew, translate’ 등을 말합니다.
 
----
 
-<iframe id="cp_embed_oKxep" src="//codepen.io/TaniaLD/embed/oKxep?height=846&amp;theme-id=0&amp;slug-hash=oKxep&amp;default-tab=result&amp;user=TaniaLD" scrolling="no" frameborder="0" height="846" allowtransparency="true" allowfullscreen="true" allowpaymentrequest="true" name="CodePen Embed" title="CodePen Embed 1" class="cp_embed_iframe " style="width: 100%; overflow: hidden;"></iframe>
-
----
-
-
----
-
-```gist
-https://gist.github.com/schacon/1
-```
-
----
 ```
 transform: 변형 함수 값;
 ```

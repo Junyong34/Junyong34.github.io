@@ -1,48 +1,85 @@
 ---
-title: css transform 2D
+title: css Animation
 date: 2018-08-07
-category: transform 2D
+category: Animation
 tags:
   - css
+  - Animation
+  - keyframe
 ---
-# translate() 속성 (2D)
+# Animation
 
 
-웹요소의 위치를 옮기거나 크기를 조절하고 회전, 변형시키는 것을 transform 이라고 합니다.
-예전에는 포토샵을 사용했어야 했는데 CSS3로 넘어오면서 포토샵의 기능과 비슷하게 웹요소를 순수 CSS 기술만으로 변형할 수 있게 되었습니다.
+애니메이션은 애니메이션을 나타내는 css스타일과 애니메이션의 sequence를 나타내는 복수 키프레임(`@keyframes`)들로 이루어진다.
 
-웹요소를 변형하려면 transfrom 속성을 사용해야 하며 기본형식은 아래와 같습니다.
-여기에서 ‘변형 함수 값’이란 오늘 알아볼 ‘scale, rotate, skew, translate’ 등을 말합니다.
+transition 프로퍼티는 단순히 요소의 프로퍼티 변화에 주안점이 있다면 animation 프로퍼티는 하나의 줄거리를 구성하여 줄거리 내에서 세부 움직임을 시간 흐름단위로 제어할 수 있고 전체 줄거리의 재생과 정지,반복까지 제어 가능하다.
 
+---
 
+<iframe id="cp_embed_oKxep" src="//codepen.io/TaniaLD/embed/oKxep?height=846&amp;theme-id=0&amp;slug-hash=oKxep&amp;default-tab=result&amp;user=TaniaLD" scrolling="no" frameborder="0" height="846" allowtransparency="true" allowfullscreen="true" allowpaymentrequest="true" name="CodePen Embed" title="CodePen Embed 1" class="cp_embed_iframe " style="width: 100%; overflow: hidden;"></iframe>
+
+---
+
+일반적으로 CSS 애니메이션을 사용하면 기존의 JavaScript 기반 애니메이션 실행과 비교하여 더 나은 렌더링 성능을 제공한다고 알려져 있다. 그러나 경우에 따라서는 JavaScript를 사용하는 것이 나을 수도 있다. jQuery 등의 애니메이션 기능은 CSS보다 간편하게 애니메이션 효과를 가능케 한다.
+
+- 비교적 작은 효과나 CSS만으로도 충분한 효과를 볼 수 있는 것은 CSS를 사용한다. 예를 들어 요소의 width 변경 애니메이션은 자바스크립트를 사용하는 것보다 훨씬 간편하며 효과적이다.
+- 세밀한 제어를 위해서는 자바스크립트 사용이 바람직하다. 예를 들어 바운스, 중지, 일시 중지, 되감기 또는 감속과 같은 고급 효과는 자바스크립트가 훨씬 유용하다.
+---
+<br>
+
+속성 | 설명   |defalut   |
+----------  | ---- | :----:
+ animation-name|@keyframes 애니메이션 이름을 지정한다. ||
+ animation-duration|한 싸이클의 애니메이션에 소요되는 시간을 초 단위(s) or 밀리 초 (ms)로 지정한다. | 0s|
+ animation-timing-function|애니메이션 효과를 위한 타이밍 함수를 지정 | ease|
+ animation-delay|요소가 로드된 시점과 애니메이션이 실제로 시작하는 사이에 대기하는 시간을 초 단위(s) 또는 밀리 초(ms)로 지정한다. | 0s|
+ animation-iteration-count|애니메이션 재생 횟수를 지정한다.|1 |
+ animation-direction|애니메이션이 종료된 이후 반복될 때 진행하는 방향 지정 |normal |
+ animation-fill-mode|애니메이션 미실행 시(종료or대기)요소읫 스타일 지정 | |
+ animation-paly-state| 애니메이션의 재생상태(재생or중지)를 지정한다|running |
+ animation|모든 애니메이션의 속석을 한번에 지정한다. | |
+
+<br>
+
+## @keyframes
+
+CSS 애니메이션과 트랜지션 방식의 주된 차이는 @keyframes rule에 있다. 이 rule을 사용하면 애니메이션의 흐름(sequence) 중의 여러 시점(breakpoint)에서 CSS 프로퍼티값을 지정할 수 있다..
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    div {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      animation-name: move;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+    }
+    /* @keyframes rule */
+    @keyframes move {
+      /* keyframe */
+      from {
+        left: 0;
+      }
+      /* keyframe */
+      to {
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div></div>
+</body>
+</html>
 ```
-transform: 변형 함수 값;
-```
 
-
-translate() |   |   |
-----------  | ---- | ----
-transform:translate() | translate (x, y) 함수는 요소를 왼쪽에서부터 x거리(距離), 위에서부터 x 거리만큼 상대적으로 위치를 정하거나, 이동 및 재배치를 지정합니다. Y 방향의 거리는 생략할 수 있지만, 이 경우의 Y방향의 거리는 "0"이 됩니다.
-transform:translateX() |translateX(거리) 함수는 좌우(수평 방향)의 이동 거리 값을 지정합니다.
-transform:translateY() |translateY(거리) 함수는 상하(수직 방향)의 이동 거리 값을 지정하십시오.
-transform:translateZ() |translateZ(거리) 함수는 Z 방향의 거리로 이동을 지정합니다. 이 함수는 백분율 값으로 지정할 수 없습니다. 백분율로 값을 지정해도 "0"이 됩니다.
-
-
-## transform: scale() – 요소를 X축이나 Y축으로 확대/축소하기
-
-scale은 지정한 크기만큼 x축 또는 y축으로 해당요소를 확대 또는 축소 시킵니다.
-scale의 사용법은 아래와 같습니다.
-
-```
-transform: scaleX(x축 비율);          // x축으로 확대/축소
-
-transform: scaleY(y축 비율);          // y축으로 확대/축소
-
-transform: scale(x축 비율, y축 비율); // x축, y축으로 확대/축소
-```
-
->scale은 원본크기를 1로 기준으로 하고, 1보다 크면 확대, 1보다 작으면 축소됩니다.
-비율값은 소수점이하로도 설정할 수 있습니다.
+>Reslut
+><iframe src="/animation-01.html"  />
 
 ```css
 ul {
