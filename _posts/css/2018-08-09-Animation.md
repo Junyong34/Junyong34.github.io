@@ -23,8 +23,10 @@ transition 프로퍼티는 단순히 요소의 프로퍼티 변화에 주안점�
 일반적으로 CSS 애니메이션을 사용하면 기존의 JavaScript 기반 애니메이션 실행과 비교하여 더 나은 렌더링 성능을 제공한다고 알려져 있다. 그러나 경우에 따라서는 JavaScript를 사용하는 것이 나을 수도 있다. jQuery 등의 애니메이션 기능은 CSS보다 간편하게 애니메이션 효과를 가능케 한다.
 
 - 비교적 작은 효과나 CSS만으로도 충분한 효과를 볼 수 있는 것은 CSS를 사용한다. 예를 들어 요소의 width 변경 애니메이션은 자바스크립트를 사용하는 것보다 훨씬 간편하며 효과적이다.
+
 - 세밀한 제어를 위해서는 자바스크립트 사용이 바람직하다. 예를 들어 바운스, 중지, 일시 중지, 되감기 또는 감속과 같은 고급 효과는 자바스크립트가 훨씬 유용하다.
-<br>
+
+
 
 속성 | 설명   |defalut   |
 ----------  | ---- | :----:
@@ -76,115 +78,214 @@ CSS 애니메이션과 트랜지션 방식의 주된 차이는 @keyframes rule�
 </body>
 </html>
 ```
-
->Reslut
-><iframe src="animation-01.html"  />
+<br>
 
 ```css
-ul {
-  list-style-type: none;
-  width: 640px;
-  margin: 30px auto 0;
-}
-ul li {
-  float: left;
-}
-ul li + li {
-  margin-left: 20px;;
-}
-ul li a img {
-  width: 200px;
-  height: auto;
-  box-shadow: 5px 5px 15px #999;
-  transition: all 0.4s ease-in-out 0.1s;  /* 마우스 호버하면 자연스럽게 변형되게 */
-}
-ul li:first-child a:hover img {
-  transform: scale(1.2);  /* 마우스 호버하면 세로길이만 1.2배 확대 */
-}
-ul li:nth-child(2) a:hover img {
-  transform: scaleX(2);   /* 마우스 호버하면 가로길이만 2배 확대 */
-}
-ul li:nth-child(3) a:hover img {
-  transform: scale(0.5);  /* 마우스 호버하면 전체 0.5배 축소 */
-}
+@keyframes move {}
 ```
-## transform: rotate() – 요소 회전하기
-
-rotate는 지정한 각도만큼 웹요소를 회전시킵니다.
-rotate의 사용법은 아래와 같습니다.
-
-```
-transform: rotateX(ndeg);  // x축을 기준으로 n도 만큼 회전
-
-transform: rotateY(ndeg);  // y축을 기준으로 n도 만큼 회전
-
-transform: rotate(ndeg);   // n도 만큼 회전
-```
-
->회전각도가 플러스값일 때는 시계 방향, 마이너스값일 때는 반시계 방향으로 회전합니다.
+keyframes 뒤에 이름을 정했다.
 
 ```css
-ul li:first-child a:hover img {
-  transform: rotateY(180deg);  /* 마우스 호버하면 Y축 기준으로 180도 회전 */
-}
-ul li:nth-child(2) a:hover img {
-  transform: rotateX(180deg);  /* 마우스 호버하면 X축 기준으로 180도 회전 */
-}
-ul li:nth-child(3) a:hover img {
-  transform: rotate(-230deg);  /* 마우스 호버하면 반시계방향으로 230도 회전 */
+@keyframes move {
+  /* 애니메이션 시작 시점 */
+  from { left: 0; }
+  /* 애니메이션 종료 시점 */
+  to   { left: 300px; }
 }
 ```
-## transform: skew() – 요소를 X축이나 Y축으로 기울이기
 
-skew는 지정한 각도만큼 웹요소를 기울입니다.
-skew의 사용법은 아래와 같습니다.
+## animation-name
+
+ @keyframes 뒤에 애니메이션을 대표하는 임의의 이름를 부여한다.
+
+ ```css
+  @keyframes move {
+      from { left: 0; }
+      to   { left: 300px; }
+    }
+    @keyframes fadeOut {
+      from { opacity: 1; }
+      to   { opacity: 0; }
+    }
+    @keyframes changeColor {
+      from { background-color: red; }
+      to   { background-color: blue; }
+    }
+
+ ```
+
+0부터 left로 300px 이동하고 도착하면 투명도를 1에서 0으로 전환하며 색삭을 변경하는
+애니메이션이다.
+
+## animation-duration
+
+ 싸이클의 애니메이션에 소요되는 시간을 초 단위(s) 또는 밀리 초 단위(ms)로 지정한다.
 
 ```
-transform: skewX(ndeg);           // x축으로 n도 만큼 기울이기
-
-transform: skewY(ndeg);           // y축으로 n도 만큼 기울이기
-
-transform: skew(x축ndeg, y축ndeg); // x축, y축으로 n도 만큼씩 기울이기
+animation-duration: .5s;
+animation-duration: 500ms;
 ```
+animation-duration은 반드시 지정해야 한다. 지정하지 않는 경우 기본값 0s가 셋팅되어 어떠한 애니메이션도 실행되지 않는다.
+
+## animation-timing-function
+애니메이션 효과를 위한 수치 함수를 지정한다
+
+##  animation-delay
+요소가 로드된 시점과 애니메이션이 실제로 시작하는 사이에 대기하는 시간을 초 단위(s) 또는 밀리 초 단위(ms)로 지정한다.
+
+```
+animation-delay: 2s;
+```
+
+## animation-iteration-count
+
+```
+animation-iteration-count: 3;
+```
+애니메이션 주기의 재생 횟수를 지정한다. 기본값은 1이며 infinite로 무한반복 할 수 있다.
+
+
+## animation-direction
+
+애니메이션이 종료된 이후 반복될 때 진행하는 방향을 지정한다.
+
+속성값|설명|
+-----|----|
+normal|기본값으로 from(0%)에서 to (100%)방향으로 진행한다.|
+reverse|to에서 from방향으로 진행|
+alternate|홀수번째는 nomarl, 짝수번째는 reverse으로 진행|
+alternate-reverse|홀수번째는 reverse, 짝수번째는 nomarl으로 진행|
 
 ```css
-ul li:first-child a:hover img {
-  transform: skewY(40deg);       /* 마우스 호버하면 Y축으로 40도 기울임 */
-}
-ul li:nth-child(2) a:hover img {
-  transform: skewX(-50deg);      /* 마우스 호버하면 X축으로 -50도 기울임 */
-}
-ul li:nth-child(3) a:hover img {
-  transform: skew(40deg, 20deg); /* 마우스 호버하면 X축으로 40도, Y축으로 20도 기울임 */
-}
+ div {
+      width: 100px;
+      height: 100px;
+      background: red;
+      position: relative;
+      animation: myAnimation 5s infinite;
+      /*홀수번째는 normal로, 짝수번째는 reverse로 진행*/
+      animation-direction: alternate;
+    }
+    @keyframes myAnimation {
+      0%   { background: red;    left: 0px;   top: 0px; }
+      25%  { background: yellow; left: 200px; top: 0px; }
+      50%  { background: blue;   left: 200px; top: 200px; }
+      75%  { background: green;  left: 0px;   top: 200px; }
+      100% { background: red;    left: 0px;   top: 0px; }
+    }
 ```
-## transform: translate() – 요소를 X축이나 Y축으로 이동
 
-translate는 지정한 각도만큼 웹요소를 기울입니다.
-translate의 사용법은 아래와 같습니다.
+## animation-fill-mode
+애니메이션 미실행 시(대기 또는 종료) 요소의 스타일을 지정한다.
 
+속성값|상태|설명
+----|:---:|-----
+none|대기|시작 프레임(from)에 설정한 스타일을 적용하지 않고 대기한다.|
+″   |종료|애니메이션 실행 전 상태로 애니메이션 요소의 프로퍼티값을 되돌리고 종료한다.|
+forwards|대기|시작 프레임(from)에 설정한 스타일을 적용하지 않고 대기한다.|
+″   |종료|종료 프레임(to)에 설정한 스타일을 적용하고 종료한다.|
+backwards|대기|시시작 프레임(from)에 설정한 스타일을 적용하고 대기한다.|
+″   |종료|애니메이션 실행 전 상태로 애니메이션 요소의 프로퍼티값을 되돌리고 종료한다.|
+both|대기|시작 프레임(from)에 설정한 스타일을 적용하고 대기한다.|
+″   |종료|종료 프레임(to)에 설정한 스타일을 적용하고 종료한다.|
+
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      font: bold 1em/100px san-serif;
+      text-align: center;
+      color: #fff;
+      background: red;
+      margin-bottom: 10px;
+      position: relative;
+      /*name duration timing-function delay iteration-count direction fill-mode play-state*/
+      animation: myAnimation 2s linear 2s;
+    }
+    div:nth-of-type(1) {
+      animation-fill-mode: none;
+    }
+    div:nth-of-type(2) {
+      animation-fill-mode: forwards;
+    }
+    div:nth-of-type(3) {
+      animation-fill-mode: backwards;
+    }
+    div:nth-of-type(4) {
+      animation-fill-mode: both;
+    }
+    @keyframes myAnimation {
+      0%   { left: 0px;   background: yellow; }
+      100% { left: 200px; background: blue; }
+    }
+  </style>
+</head>
+<body>
+  <h1>animation-fill-mode</h1>
+
+  <div>none</div>
+  <p>대기 : 시작 프레임(from)에 설정한 스타일을 적용하지 않고 대기한다.</p>
+  <p>종료 : 애니메이션 실행 전 상태로 애니메이션 요소의 프로퍼티값을 되돌리고 종료한다.</p>
+
+  <div>forwards</div>
+  <p>대기 : 시작 프레임(from)에 설정한 스타일을 적용하지 않고 대기한다.
+  <p>종료 : 종료 프레임(to)에 설정한 스타일을 적용하고 종료한다.
+
+  <div>backwards</div>
+  <p>대기 : 시작 프레임(from)에 설정한 스타일을 적용하고 대기한다.
+  <p>종료 : 애니메이션 실행 전 상태로 애니메이션 요소의 프로퍼티값을 되돌리고 종료한다.
+
+  <div>both</div>
+  <p>대기 : 시작 프레임(from)에 설정한 스타일을 적용하고 대기한다.
+  <p>종료 : 종료 프레임(to)에 설정한 스타일을 적용하고 종료한다.
+</body>
+</html>
 ```
-transform: translateX(x축 이동거리);             // x축으로 이동
 
-transform: translateY(y축 이동거리);             // y축으로 이동
-
-transform: translate(x축 이동거리, y축 이동거리); // x축, y축으로 동시 이동
-```
+## animation-play-state
+애니메이션 재생 상태(재생 또는 중지)를 지정한다. 기본값은 running이다.
 
 ```css
-ul li:first-child a:hover img {
-  transform: translateY(50px);        /* 마우스 호버하면 Y축으로 50px 이동 */
-}
-ul li:nth-child(2) a:hover img {
-  transform: translateX(50px);        /* 마우스 호버하면 X축으로 50px 이동 */
-}
-ul li:nth-child(3) a:hover img {
-  transform: translate(-50px, -50px); /* 마우스 호버하면 X축으로 -50px, Y축으로 -50px 이동 */
-}
+div {
+      width: 100px;
+      height: 100px;
+      background: red;
+      position: relative;
+      /*name duration timing-function delay iteration-count direction fill-mode play-state*/
+      animation: move 5s infinite;
+    }
+    div:hover {
+      background: blue;
+      animation-play-state: paused;
+    }
+    div:active {
+      background: yellow;
+      animation-play-state: running;
+    }
+    @keyframes move {
+      from { left: 0px; }
+      to   { left: 200px; }
+    }
 ```
 
+## animation
+모든 애니메이션 프로퍼티를 한번에 지정한다. 값을 지정하지 않은 프로퍼티에는 기본값이 지정된다. 지정 방법은 다음과 같다.
+```
+animation: name duration timing-function delay iteration-count direction fill-mode play-state
+```
 
-
----
+animation-duration은 반드시 지정해야 한다. 지정하지 않는 경우 기본값 0s가 셋팅되어 어떠한 애니메이션도 실행되지 않는다. 기본값은 아래와 같다.
+```
+none 0 ease 0 1 normal none running
+```
 
 ## reference
+
+- [참고1-css 자동완성](http://www.css3generator.com/)
+- [참고2](https://css3gen.com/wp-content/cache/all//index.html)
+- [참고3](https://www.cssmatic.com/box-shadow)
