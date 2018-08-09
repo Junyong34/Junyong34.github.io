@@ -88,6 +88,3 @@ student.sort(function(a, b) { // 내림차순
 
 
 ## reference
-- [W3schools windobject](https://www.w3schools.com/jsref/obj_window.asp)
-- [MDN Web Doc](https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
-
