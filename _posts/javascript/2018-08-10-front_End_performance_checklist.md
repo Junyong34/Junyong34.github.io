@@ -1,6 +1,6 @@
 ---
 title: Front-End-Performance-Checklist
-date: 2018-08-08
+date: 2018-08-10
 category: javascript
 tags:
   - javascript
