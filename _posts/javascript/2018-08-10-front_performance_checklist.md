@@ -11,13 +11,6 @@ tags:
 
 ## 목차
 
-1. **[HTML](#html)**
-2. **[CSS](#css)**
-3. **[Fonts](#fonts)**
-4. **[Images](#images)**
-5. **[JavaScript](#javascript)**
-6. **[Server](#server) (in progress)**
-7. **[JS Frameworks](#performances-and-js-frameworks) (in progress)**
 
 ## 소개
 
