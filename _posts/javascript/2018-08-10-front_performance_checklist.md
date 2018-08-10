@@ -22,22 +22,6 @@ tags:
 
 **프론트엔드 성능 체크리스트**의 모든 항목은 최고의 성능을 내는데 필수적이지만, 일부 규칙의 우선 순위를 정하는데 도움을 주기 위해 우선 순위/영향을 3가지 레벨로 구분했습니다:
 
-* ![Low][low]는 해당 항목이 프로젝트에 **낮은** 우선 순위와 영향을 가진다는 의미입니다.
-* ![Medium][medium]은 해당 항목이 프로젝트에 **중간** 정도의 우선 순위와 영향을 가진다는 의미입니다. 이 항목에 대해 고민하는 것을 피해선 안 됩니다.
-* ![High][high]는 해당 항목이 프로젝트에 **높은** 우선 순위와 영향을 가진다는 의미입니다. 이 규칙을 피할 수 없으며, 수정 사항을 적용해야 합니다.
-
-
-[logo]: images/logo-front-end-performance-checklist.jpg
-[html]: images/html.png
-[css]: images/css.png
-[fonts]: images/fonts.png
-[images]: images/images.png
-[javascript]: images/javascript.png
-[server-side]: images/server-side.png
-
-[low]: https://front-end-checklist.now.sh/low.svg
-[medium]: https://front-end-checklist.now.sh/medium.svg
-[high]: https://front-end-checklist.now.sh/high.svg
 
 ## reference
 - [github](https://github.com/thedaviddias/Front-End-Performance-Checklist)
