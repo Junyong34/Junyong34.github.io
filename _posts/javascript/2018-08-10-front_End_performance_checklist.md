@@ -6,7 +6,7 @@ tags:
   - javascript
   - html
   - css
-  -performance
+  - performance
 ---
 <h1 align="center">
 <br>
@@ -73,6 +73,7 @@ tags:
 * ![Low][low]는 해당 항목이 프로젝트에 **낮은** 우선 순위와 영향을 가진다는 의미입니다.
 * ![Medium][medium]은 해당 항목이 프로젝트에 **중간** 정도의 우선 순위와 영향을 가진다는 의미입니다. 이 항목에 대해 고민하는 것을 피해선 안 됩니다.
 * ![High][high]는 해당 항목이 프로젝트에 **높은** 우선 순위와 영향을 가진다는 의미입니다. 이 규칙을 피할 수 없으며, 수정 사항을 적용해야 합니다.
+
 
 ### 성능 도구
 
@@ -429,7 +430,7 @@ tags:
 
 ## JavaScript
 
-![javascript]
+
 
 - [ ] **JS 압축:** ![high] CSS 파일을 압축하고, 최종 파일에서 주석, 공백, 줄바꿈을 제거합니다. *(HTTP/2에서도 여전히 유효합니다.)*
 
@@ -513,7 +514,6 @@ tags:
 
 ## Server
 
-![server-side]
 
 - [ ] **웹페이지 크기 < 1500 KB:** ![high] (이상적인 크기 < 500 KB) 페이지의 크기 + 리소스를 최대한 줄이세요
 
@@ -659,9 +659,7 @@ Support this project by becoming a sponsor. Your logo will show up here with a l
 <a href="https://opencollective.com/front-end-checklist/sponsor/0/website" target="_blank"><img src="https://opencollective.com/front-end-checklist/sponsor/0/avatar.svg"></a>
 <a href="https://opencollective.com/front-end-checklist/sponsor/1/website" target="_blank"><img src="https://opencollective.com/front-end-checklist/sponsor/1/avatar.svg"></a>
 <a href="https://opencollective.com/front-end-checklist/sponsor/2/website" target="_blank"><img src="https://opencollective.com/front-end-checklist/sponsor/2/avatar.svg"></a>
-<a href="https://opencollective.com/front-end-checklist/sponsor/3/website" target="_blank"><img src="https://opencollective.com/front-end-checklist/sponsor/3/avatar.svg"></a>
-<a href="https://opencollective.com/front-end-checklist/sponsor/4/website" target="_blank"><img src="https://opencollective.com/front-end-checklist/sponsor/4/avatar.svg"></a>
-<a href="https://opencollective.com/front-end-checklist/sponsor/5/website" target="_blank"><img src="https://opencollective.com/front-end-checklist/sponsor/5/avatar.svg"></a>
+<a href="https://opencollective.com/front-end-checklist/sponsor/3/website" target="_blank"><img src="https://opencollective.com/front-end-checklist/sponsor/5/avatar.svg"></a>
 <a href="https://opencollective.com/front-end-checklist/sponsor/6/website" target="_blank"><img src="https://opencollective.com/front-end-checklist/sponsor/6/avatar.svg"></a>
 <a href="https://opencollective.com/front-end-checklist/sponsor/7/website" target="_blank"><img src="https://opencollective.com/front-end-checklist/sponsor/7/avatar.svg"></a>
 <a href="https://opencollective.com/front-end-checklist/sponsor/8/website" target="_blank"><img src="https://opencollective.com/front-end-checklist/sponsor/8/avatar.svg"></a>
