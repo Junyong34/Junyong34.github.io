@@ -107,7 +107,7 @@ tags:
 
 ## HTML
 
-![html]
+
 
 - [ ] **HTML 압축:** ![medium] HTML 코드를 압축하고, 최종 파일에서 주석, 공백, 줄바꿈을 제거합니다.
 
@@ -181,7 +181,7 @@ tags:
 
 ## CSS
 
-![css]
+
 
 - [ ] **CSS 압축:** ![high] CSS 파일을 압축하고, 최종 파일에서 주석, 공백, 줄바꿈을 제거합니다.
 
@@ -297,7 +297,7 @@ tags:
 
 ## Fonts
 
-![fonts]
+
 
 * 📖 [A Book Apart, Webfont Handbook](https://abookapart.com/products/webfont-handbook)
 
@@ -347,7 +347,7 @@ tags:
 
 ## Images
 
-![images]
+
 
  * 📖 [Image Bytes in 2018](https://httparchive.org/reports/page-weight#bytesImg)
 
@@ -672,13 +672,13 @@ All icons are provided by [Icons8](https://icons8.com/)
 
 **[⬆ back to top](#table-of-contents)**
 
-[logo]: images/logo-front-end-performance-checklist.jpg
+<!-- [logo]: images/logo-front-end-performance-checklist.jpg
 [html]: images/html.png
 [css]: images/css.png
 [fonts]: images/fonts.png
 [images]: images/images.png
 [javascript]: images/javascript.png
-[server-side]: images/server-side.png
+[server-side]: images/server-side.png -->
 
 [low]: https://front-end-checklist.now.sh/low.svg
 [medium]: https://front-end-checklist.now.sh/medium.svg
