@@ -160,7 +160,11 @@ a[href$=".xls"] { background: darkgreen; }
 
 가상클래스는 웹 문서의 소스에는 실제 존재하지 않지만 필요에 의해 임의로 가상의 선택자를 지정한다.
 
->링크 선택자(The link pseudo-classes)와 동적 선택자(The user action pseudo-classes)
+
+> 링크 선택자(The link pseudo-classes)와 동적 선택자(The user action pseudo-classes)
+
+
+
 
 패턴 | 설명
 ----------  | ---- |
@@ -170,9 +174,7 @@ E:active | E요소에 마우스 클릭이나 키보드 엔터가 눌린 동안 E
 E:hover | E요소에 마우스가 올라가 있는 동안 E를 선택한다.
 E:focus | E요소에 포커스가 있는 동안 E를 선택한다.
 
-<h3>링크 엘리먼트 사용시 링크선택자를 통해 스타일을 줄수 있다.
-
-<br><br>
+링크 엘리먼트 사용시 링크선택자를 통해 스타일을 줄수 있다.
 
 ---
 
