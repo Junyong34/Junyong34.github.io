@@ -1,6 +1,6 @@
 ---
 title: css selector
-date: 2018-08-0123
+date: 2018-08-13
 category: selector
 tags:
   - css
