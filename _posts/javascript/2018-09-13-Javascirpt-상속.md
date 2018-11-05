@@ -1,5 +1,5 @@
 ---
-title: 자바스크립트 WebWorker
+title: 자바스크립트 상속
 date: 2018-09-13
 category: javascript
 tags:
