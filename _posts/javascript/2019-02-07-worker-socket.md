@@ -1,6 +1,6 @@
 ---
 title: 자바스크립트 WebWorker & WebSocket & Axios
-date: 2018-09-13
+date: 2019-02-18
 category: javascript
 tags:
   - WebWorker
