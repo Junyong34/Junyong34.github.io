@@ -1,6 +1,6 @@
 ---
 title: 자바스크립트 비동기 관리 Promise async , await
-date: 2018-02-11
+date: 2019-02-11
 category: javascript
 tags:
   - Promise
