@@ -18,13 +18,10 @@ vuejs를 이용해 모니터링 화면을 개발 진행을 했었다. 개발을 
 SPA를 하게 되면 메모리누수가 당연히 발생하기 마련이다. 페이지 이동이 따로 없기 때문에
 메모리를 자동으로 초기화가 되지 않는데 그렇게 때문에 항상 변수, 객체등을 초기화를 반드시 해줘야 한다.
 
-
 2. 대량 데이터 및 대량에 Vuex 데이터 처리
-
 VueX를 사용하거나 component *.vue 파일 data를 사용하게 되면 내부적으로 getter, setter가
 생성이 된다. 실제 console.log로 vue에 할당한 데이터를 찍어보면 Observer 패턴이 물려 있고
 각 key값마다 getter/setter가 생성 되어있다 .
-
 이로인해 데이터가 변경이 되는걸 프록시를 통해 감지하여 바로바로 화면에 반영을 할 수 있다.
 
 문제는 하나에 객체 데이터가 엄청나게 많은 자식데이터 및 array 데이터가 있다면 해당 데이터 모든 key값에 getter/setter를 다 생성한다 여기서 고비용의 메모리가 사용이 된다. 그렇게 되면 자동으로 js Heap Memory 사이즈도 증가 되게 된다.
@@ -73,7 +70,6 @@ getter에서 받은 데이터를 반응형을 끊고 table에 데이터를 사�
 
 
 
-```
 ## reference
 - [참고](https://vuejs.org/v2/cookbook/avoiding-memory-leaks.html)
 - [참고](https://github.com/vuejs/vue/issues/4384)
