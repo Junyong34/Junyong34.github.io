@@ -55,18 +55,18 @@ mounted() {
 getter에서 받은 데이터를 반응형을 끊고 table에 데이터를 사용하고 있다.
 
 
-3. 비동기 호출 타이머를 사용시 꼭 제거
+- 비동기 호출 타이머를 사용시 꼭 제거
 
-4. 무분별한 Closures의 사용
+- 무분별한 Closures의 사용
 
-5. new 키워드를 통한 인스터스 생성 반드시 beforeDestroy Hook에서 제거 및 Null 처리
+- new 키워드를 통한 인스터스 생성 반드시 beforeDestroy Hook에서 제거 및 Null 처리
 
-6. SPA  환경에서 단일 Vue-router를 사용하는데 이때 메모리 누수 실제 발생 가능 주의
+- SPA  환경에서 단일 Vue-router를 사용하는데 이때 메모리 누수 실제 발생 가능 주의
 
-7. 크롬 개발자도구 vue 확장프로그렘 레코딩를 사용하면 메모리를 많이 사용하게됨, 메모리 관련
+- 크롬 개발자도구 vue 확장프로그렘 레코딩를 사용하면 메모리를 많이 사용하게됨, 메모리 관련
 체크할때 vue 확장프로그램 해제 및 레코딩 중지하고 테스트 해야한다.
 
-8. keep-alive 태그 사용시 캐싱이 되기 떄문에 Destroy Hook evnet를 타지 않는다. 그렇기 떄문에 다른 2개 라이프사이클인 activated, deactivated Hook에서 초기화 로직을 수행해 줘야한다.
+- keep-alive 태그 사용시 캐싱이 되기 떄문에 Destroy Hook evnet를 타지 않는다. 그렇기 떄문에 다른 2개 라이프사이클인 activated, deactivated Hook에서 초기화 로직을 수행해 줘야한다.
 
 
 
