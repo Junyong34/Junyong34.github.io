@@ -71,9 +71,9 @@ getter에서 받은 데이터를 반응형을 끊고 table에 데이터를 사�
 
 
 ## reference
-- [참고](https://vuejs.org/v2/cookbook/avoiding-memory-leaks.html)
-- [참고](https://github.com/vuejs/vue/issues/4384)
-- [참고](https://github.com/vuejs/vuex/issues/1507)
-- [참고](https://github.com/vuejs/vue-devtools/issues/210)
+- [참고 vue 문서](https://vuejs.org/v2/cookbook/avoiding-memory-leaks.html)
+- [참고 vue github issues](https://github.com/vuejs/vue/issues/4384)
+- [참고 vue github issues](https://github.com/vuejs/vuex/issues/1507)
+- [참고 vue github issues](https://github.com/vuejs/vue-devtools/issues/210)
 
 
