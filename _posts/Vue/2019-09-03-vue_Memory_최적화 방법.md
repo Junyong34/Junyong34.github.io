@@ -1,6 +1,6 @@
 ---
 title: Vuejs 사용 Memory 최적화
-date: 2019-05-16
+date: 2019-09-03
 category: javascript
 tags:
   - vue
