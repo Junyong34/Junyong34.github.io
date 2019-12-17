@@ -28,8 +28,6 @@ tags:
 
 
 
-
-
 ### ※ defineReactive 적용이 필요한 데이터( getter/setter)
 Vue에서 Data/ computed/ watch / Vuex state를 사용하게 되면 반응형이 자동으로 등록이 된다. 
 
